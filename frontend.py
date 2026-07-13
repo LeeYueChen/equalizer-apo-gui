@@ -15,5 +15,7 @@ def generate_config(gains):
         count += 1
     return string
 
-with open("preset.txt", "w", encoding="utf-8") as file:
-    file.write("Filter  " , number ,": ON  PK       Fc     " , frequency ,"Hz   Gain  " , gain, " dB  Q 4.32")
+def save_config(config_string):
+    path = r"C:\Program Files\EqualizerAPO\config\peace.txt"
+    with open(path, "w", encoding="utf-8") as file:
+        file.write(config_string)
